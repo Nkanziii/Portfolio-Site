@@ -1,0 +1,677 @@
+/* ---- General Styling ---- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "polka-mn", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- Header Styling ---- */
+header {
+    position: relative;  /* Allows absolute positioning inside */
+    text-align: center;  /* Centers the h1 */
+    padding-top: 50px;  /* Space from top */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ---- Big Centered Title ---- */
+header h1 {
+    font-size: 80px; /* Big header */
+    color: #4C2C59;
+    font-family: "polka-mn", sans-serif;
+    font-weight: 700;
+    margin: 0;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    padding-right: 50px;
+}
+header h1:hover {
+    transform: scale(1.2);
+}
+header p {
+    font-size: 20px;
+    padding-right: 50px;
+    transition: transform 0.3s ease-in-out;
+    color: #4C2C59;
+}
+header p:hover {
+    transform: scale(1.2);
+}
+
+
+/* ---- Small Nav on Top Right ---- */
+nav {
+    position: fixed; /* Keeps the nav at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(249, 200, 233, 0.855); /* Light background to make it visible */
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end; /* Moves it to the right */
+    align-items: center;
+    z-index: 600; /* Ensures it stays above the image */
+}
+nav img {
+    padding-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-bottom: 40px;
+    padding-right: 30px;
+    padding-top: 30px;
+    display: flex; /* Keeps nav items in a row */
+}
+
+nav ul li {
+    margin-left: 20px; /* Space between links */
+}
+
+nav a {
+    color: #4C2C59;
+    text-decoration: none;
+    font-size: 20px; /* Small links */
+    font-weight: bold;
+}
+
+/* ---- Fullscreen Artwork Covering Main Page ---- */
+
+/* ---- About Section Styling ---- */
+#about {
+    text-align: center;
+    padding: 100px 20px; /* Adds space above and below */
+    margin-top: 80vh;
+    background-color: #f8e2f1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bigger Title in About */
+#about h2 {
+    color: #D94897;
+    font-size: 40px; /* Slightly bigger */
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
+
+/* Boxed Paragraph */
+#about p {
+    color: #D94897;
+    font-size: 35px;
+    max-width: 600px; /* Restrict width */
+    margin: 0 auto; /* Centers the box */
+    padding: 50px;
+    background: #F2CEE6; /* Invisible box effect */
+    border-radius: 10px; /* Rounded corners */
+    
+}
+.about-text span {
+    display: inline-block;
+    transition: transform 0.2s ease-out, text-shadow 0.3s ease-out; /* Smooth movement */
+    position: relative;
+}
+.about-text span:hover {
+    text-shadow: 0px 0px 10px rgba(120, 124, 254, 0.8);
+}
+
+.about-text .space {
+    display: inline; /* Prevents extra spacing between words */
+    width: 8px; /* Ensures normal spacing */
+}
+
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 50px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Keep text together in a container */
+.hero-text {
+    width: 40%;
+    text-align: right;
+    margin-right: 5%;
+}
+
+/* Style h1 and p */
+.hero h1 {
+    font-size: 100px; /* Adjust size */
+    margin-bottom: 10px; /* Space between title and paragraph */
+    text-align: right;
+}
+
+.hero p {
+    font-size: 30px;
+    line-height: 1.4;
+    text-align: right;
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Position the SVG illustration */
+.hero-illustration {
+    display: flex;
+    justify-content: center; /* Centers the SVG */
+    align-items: center;
+    height: 100vh;
+    padding-left: 100%;
+
+}
+
+.hero-illustration object {
+    width: 1000px; /* Adjust size */
+    height: auto;
+    max-width: 1000px;
+}
+
+
+/* ---- Education Section ---- */
+/* Section Layout */
+/* ---- Education & Skills Section ---- */
+.edu-skills {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    font-family: inherit; /* Matches the page font */
+    font-size: 25px;
+    color: #4C2C59;
+    margin-bottom: 50px;
+}
+
+/* Tabs (Rounded Buttons) */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px; /* Adds space below the buttons */
+}
+
+.tab {
+    padding: 12px 24px;
+    font-size: 30px;
+    border: none;
+    background: #ffb6c1; /* Light pink for inactive tabs */
+    cursor: pointer;
+    border-radius: 25px; /* Rounded edges */
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    font-family: inherit; /* Ensure button font matches page */
+}
+
+.tab.active {
+    background: #ff69b4; /* Bright pink for active tab */
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Content Container (Brings Content Down to Avoid Overlap) */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding-top: 20px; /* Moves the boxes down slightly */
+}
+
+/* Invisible Middle Divider */
+.content-container::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Content Areas */
+.tab-content {
+    width: 45%;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0; /* Hide non-active sections */
+    pointer-events: none; /* Prevent interaction when hidden */
+    margin-top: 50px; /* Moves boxes down */
+}
+
+/* Show Active Section */
+.tab-content.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Left Side (Education) */
+#education-content {
+    left: 0;
+    text-align: left;
+}
+
+/* Right Side (Skills) */
+#skills-content {
+    right: 0;
+    text-align: left;
+}
+
+/* Inner Box for Skills */
+.content-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px; /* Rounded box */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
+    width: fit-content;
+}
+
+/* When switching tabs, the box slides smoothly */
+#education-content.active {
+    transform: translateX(0);
+}
+
+#skills-content.active {
+    transform: translateX(0);
+}
+
+/* Hide Non-Active Content */
+#education-content:not(.active) {
+    transform: translateX(-50%);
+}
+
+#skills-content:not(.active) {
+    transform: translateX(50%);
+}
+
+/* Color Change Effect */
+#education-content.active .content-box {
+    background: rgba(255, 180, 200, 0.8);
+}
+
+#skills-content.active .content-box {
+    background: rgba(254, 193, 209, 0.8);
+}
+
+
+/*        PORTFOLIO        */
+#projects {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8e2f1;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin: 10px 0;
+    color: #4C2C59;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #D94897;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.buttons a:first-child {
+    background: #ff69b4;
+    color: white;
+}
+
+.buttons a:last-child {
+    background: #4C2C59;
+    color: white;
+}
+
+.buttons a:hover {
+    opacity: 0.8;
+}
+
+/**   ARTORK   **/
+/* Artwork Section */
+#artwork {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8e2f1;
+}
+
+/* Swiper Slider */
+.swiper {
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+/* Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ff69b4;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.6); /* Light transparent background */
+    border-radius: 50%; /* Make them circular */
+    padding: 15px;
+    transition: background 0.3s ease-in-out;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(255, 255, 255, 0.9); /* Brighter on hover */
+}
+
+/* Pagination Dots */
+.swiper-pagination {
+    bottom: 10px;
+}
+/* Position Next & Prev Arrows */
+.swiper-button-next {
+    right: -90px; /* Push further outside */
+}
+
+.swiper-button-prev {
+    left: -90px; /* Push further outside */
+}
+
+
+/***   CONTACT   **/
+#contact {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8e2f1;
+}
+
+#contact h2 {
+    font-size: 36px;
+    color: #D94897;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #4C2C59;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    max-width: 500px;
+}
+
+label {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #4C2C59;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ff69b4;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #ff69b4;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff1493;
+}
+
+/* CV Download Button */
+#contact {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8e2f1;
+}
+
+#contact h2 {
+    font-size: 36px;
+    color: #D94897;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #4C2C59;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    max-width: 500px;
+}
+
+label {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #4C2C59;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ff69b4;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #ff69b4;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff1493;
+}
+
+/* CV Download Button */
+.cv-download {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #4C2C59;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.cv-download:hover {
+    background: #311D3F;
+}
+
+/* Form success message */
+#form-status {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #4C2C59;
+}
+
+#image img{
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20%;
+    padding-bottom: 20%;
+   
+}
+
+/************PROJECT CARD*******/
+.project-card {
+    background: linear-gradient(135deg, #ffe0f0, #fff5f9);
+    border-radius: 15px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ffd1dc, #ffe9f0);
+}
+
+
+/*        ARTWORK PREVIEW   */
+.art-preview {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .art-preview img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .art-preview img:hover {
+    transform: scale(1.05);
+  }
+
+  #certifications {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+#certifications h2 {
+    font-size: 36px;
+    color: #D94897;
+    margin-bottom: 20px;
+}
+
+#certifications .content-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: auto;
+}
+
+  

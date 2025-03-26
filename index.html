@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+        <meta name="description" content="Welcome to Niki Khanezai's website - a showcase of my web development and creative projects."/>
+        <title>Niki Khanezai's portfolio</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="https://use.typekit.net/shh7dyh.css">
+        <!-- Swiper.js CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    </head>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            let hero = document.querySelector('.hero');
+            let scrollPosition = window.scrollY;
+            hero.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        });
+    </script>
+
+    <body>
+
+        <!----------title page--------->
+        <header>
+            <section class="hero">
+                <!----------SVG section------->
+                <div class="hero-illustration">
+                    <object type="image/svg+xml" data="images/cropped-svg.svg" id="eye-svg"></object>
+
+
+                </div>
+
+                <div class="hero-text">
+                <h1>Niki Khanezai</h1>
+                <p>Creative Developer | Web & Animation</p>
+                </div>
+
+            </section>
+
+
+            <!-------This is the navigation section-->
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#artwork">Artwork</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="about-text" id="aboutText">Hi, I'm Niki Khanezai, a creative professional with a background in animation and illustration, now transitioning into web development. 
+                My passion for visual storytelling and design has driven me to blend creativity with code, crafting engaging and dynamic digital experiences.
+                With a strong foundation in art and animation, I bring a unique perspective to front-end development, focusing on interactive design, smooth animations, and user-friendly interfaces.
+                I am currently working on projects that showcase both my artistic vision and technical abilities.
+                I am excited to create visually compelling and interactive websites that bring ideas to life and make an impact in the digital space.
+            </p>
+        </section>
+        <!--------------------Education and Skills section---------------->
+        <section class="edu-skills">
+            <div class="tabs">
+                <button id="edu-tab" class="tab active">Education</button>
+                <button id="skills-tab" class="tab">Skills</button>
+            </div>
+        
+            <div class="content-container">
+                <!-- Education Box -->
+                <div id="education-content" class="tab-content active">
+                    <h3>Education</h3>
+                    <div class="content-box">
+                        <p><strong>Bachelor’s Degree in Illustration Animation</strong> - Kingston University</p>
+                        <p><strong>Foundation in Visual Communications</strong> - Ravensbourne University</p>
+                        <p><strong>A-levels in Art, English Literature, History</strong></p>
+                    </div>
+                </div>
+        
+                <!-- Skills Box -->
+                <div id="skills-content" class="tab-content">
+                    <h3>Skills</h3>
+                    <div class="content-box">
+                        <ul>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>React.js, Git, GitHub</li>
+                            <li>Adobe Illustrator, Photoshop, Animate, indesign</li>
+                            <li>Figma, UI/UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <section id="certifications">
+                <h2>Certifications</h2>
+                <div class="content-box">
+                    <p><strong>Meta Programming with JavaScript</strong> - Coursera (Meta Front-End Developer Certificate)</p>
+                    <p><strong></strong></p>
+                </div>
+            </section>
+            
+        </section>
+     
+        <!--------------------------PORTFOLIO SECFTION-->
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal website built with HTML, CSS, and JavaScript.</p>
+                        <img src="images/sc-portfolio.png"/>
+                        <div class="buttons">
+                            <a href="https://nkanziii.github.io/Initial-site/" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Role Play Game using JavaScript</h3>
+                        <p>Interactive game using JavaScript.</p>
+                        <img src="images/sc-game.png">
+                        <div class="buttons">
+                            <a href="https://nkanziii.github.io/Role-Play-Game/" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                    <h3>Penguin Animation with CSS</h3>
+                    <p>Using CSS properties to create a waving penguin animation.</p>
+                    <img src="images/sc-penguin.png"/>
+                    <div class="buttons">
+                        <a href="https://nkanziii.github.io/CSS-Animation/" target="_blank">GitHub</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Calorie counter</h3>
+                        <p>Building a calorie counter using JavaScript.</p>
+                        <img src="images/sc-calorie.png"/>
+                        <div class="buttons">
+                            <a href="https://nkanziii.github.io/Building-Calorie-Counter/" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Random background changer</h3>
+                        <p>Using JavaScript to create a background changer.</p>
+                        <img src="images/sc-background.png"/>
+                        <div class="buttons">
+                            <a href="https://nkanziii.github.io/Random-Background/" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+
+    <!--------  ARTWORK    -->
+    <section id="artwork">
+        <h2>My Artwork</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Artwork 1 -->
+                <div class="swiper-slide">
+                    <a href="emotions.html">
+                      <h3>Emotions</h3>
+                      <div class="art-preview">
+                       <img src="images/emotions-2.jpg">
+                      </div>
+                    </a>
+                </div>
+                <!-- Artwork 2 -->
+                <div class="swiper-slide">
+                    <a href="inkwork.html">
+                      <h3>Ink Work</h3>
+                      <div class="art-preview">
+                       <img src="images/collage-4.png">
+                      </div>
+                    </a>
+                </div>
+                <!-- Artwork 3 -->
+                <div class="swiper-slide">
+                    <a href="illustrations.html">
+                      <h3>Illustrations</h3>
+                      <div class="art-preview">
+                       <img src="images/illus-4.JPG">
+                      </div>
+                    </a>
+                </div>
+                <!-- Add more artwork slides as needed -->
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+            <!-- Pagination Dots -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <!--------------other image-->
+    <div id="image">
+        <img src="images/highq.png" alt="other-image">
+    </div>
+
+
+    <!----------------CONTACT  -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Fill out the form below to reach out to me.</p>
+        
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+    
+            <button type="submit">Send</button>
+        </form>
+    
+        <!-- CV Download Button -->
+        <a href="FinalCV.pdf" download class="cv-download">Download My CV</a>
+    
+        <p id="form-status"></p> <!-- This will show a success message -->
+    </section>
+    
+            
+
+
+
+
+       <!-----------------THE END OF THE WEBSITE------------>
+
+    </body>
+
+    <script src="script.js"></script>
+    
+</html>
